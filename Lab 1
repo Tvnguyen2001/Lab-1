@@ -1,0 +1,21 @@
+int main() {
+    // arr to store octal
+    int arr[2];
+    // read decimal
+    int decimal; cin >> decimal;
+    int i = 0;
+    int n = decimal;
+    // until decimal becomes 0
+    while(n != 0) {
+        // get remainder, divide by 8
+        int rem = n % 8;
+        // store it
+        arr[i] = rem;
+        i++;
+        // divide by 8
+        n = n / 8;
+    }
+    // print the arr in reverse order
+    cout << arr[1] << arr[0] << endl;
+    return 0;
+}
